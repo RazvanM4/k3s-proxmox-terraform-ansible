@@ -1,6 +1,6 @@
 # k3s-proxmox Ansible Collection
 
-Collection namespace: `razvanapps.k3s_proxmox`.
+Collection namespace: `razvanm4.k3s_proxmox`.
 
 Included roles:
 - `k3s_prereqs`: OS hardening, sysctl parameters, swap disable, kernel modules (`br_netfilter`, `overlay`).

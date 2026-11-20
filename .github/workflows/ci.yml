@@ -34,3 +34,9 @@ jobs:
         run: |
           yamllint -d "{extends: relaxed, rules: {line-length: {max: 160}}}" ansible/
           ansible-galaxy collection build ansible/ --output-path ./artifacts
+
+      - name: Upload Ansible collection tarball
+        uses: actions/upload-artifact@v4
+        with:
+          name: ansible-collection-tarball
+          path: artifacts/*.tar.gz

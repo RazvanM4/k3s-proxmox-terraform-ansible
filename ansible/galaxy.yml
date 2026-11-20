@@ -1,4 +1,4 @@
-namespace: razvanapps
+namespace: razvanm4
 name: k3s_proxmox
 version: 1.0.0
 readme: README.md

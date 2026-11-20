@@ -17,7 +17,7 @@ Proxmox VE Cloud-Init Template (VMID 9000)
          ├─ Provisions k3s-cp-01..03 (embedded etcd) + k3s-wk-01..02
          ├─ Injects static IPs (RFC 5737 defaults), DNS & SSH public key
          └─ Emits generated-inventory.ini
-               └─▶ Ansible Collection razvanapps.k3s_proxmox (./ansible)
+               └─▶ Ansible Collection razvanm4.k3s_proxmox (./ansible)
                      ├─ Role: k3s_prereqs (swapoff, sysctl, modules)
                      ├─ Role: k3s_server (HA cluster-init + join)
                      ├─ Role: k3s_agent (worker node join)
