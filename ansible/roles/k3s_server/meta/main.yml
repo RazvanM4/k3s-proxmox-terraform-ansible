@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  role_name: k3s_server
+  author: Razvan Mares
+  description: High-availability embedded etcd k3s control-plane bootstrap and join role.
+  license: MIT
+  min_ansible_version: "2.15"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - jammy
+        - noble
+    - name: Debian
+      versions:
+        - bookworm
+  galaxy_tags:
+    - k3s
+    - kubernetes
+    - controlplane
+    - proxmox
+
+dependencies: []

@@ -28,12 +28,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install ansible-lint and yamllint
-        run: pip install ansible-lint yamllint ansible-core
-      - name: Lint YAML & Ansible playbooks
+      - name: Install ansible-lint, yamllint, and galaxy-importer
+        run: pip install ansible-lint yamllint ansible-core galaxy-importer
+      - name: Lint YAML, build collection, and validate with galaxy-importer
         run: |
           yamllint -d "{extends: relaxed, rules: {line-length: {max: 160}}}" ansible/
           ansible-galaxy collection build ansible/ --output-path ./artifacts
+          python3 -m galaxy_importer.main artifacts/razvanm4-k3s_proxmox-*.tar.gz
 
       - name: Upload Ansible collection tarball
         uses: actions/upload-artifact@v4

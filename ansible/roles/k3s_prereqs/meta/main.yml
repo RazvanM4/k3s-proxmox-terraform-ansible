@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  role_name: k3s_prereqs
+  author: Razvan Mares
+  description: OS prerequisites, swap disable, kernel modules, and sysctl tuning for k3s clusters.
+  license: MIT
+  min_ansible_version: "2.15"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - jammy
+        - noble
+    - name: Debian
+      versions:
+        - bookworm
+  galaxy_tags:
+    - k3s
+    - kubernetes
+    - linux
+    - proxmox
+
+dependencies: []

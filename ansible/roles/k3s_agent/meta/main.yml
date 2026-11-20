@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  role_name: k3s_agent
+  author: Razvan Mares
+  description: Enrolls Linux worker nodes into an existing k3s cluster.
+  license: MIT
+  min_ansible_version: "2.15"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - jammy
+        - noble
+    - name: Debian
+      versions:
+        - bookworm
+  galaxy_tags:
+    - k3s
+    - kubernetes
+    - worker
+    - proxmox
+
+dependencies: []

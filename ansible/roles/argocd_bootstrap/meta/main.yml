@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  role_name: argocd_bootstrap
+  author: Razvan Mares
+  description: Installs Argo CD manifests on k3s for GitOps cluster reconciliation.
+  license: MIT
+  min_ansible_version: "2.15"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - jammy
+        - noble
+    - name: Debian
+      versions:
+        - bookworm
+  galaxy_tags:
+    - argocd
+    - gitops
+    - k3s
+    - kubernetes
+
+dependencies: []
