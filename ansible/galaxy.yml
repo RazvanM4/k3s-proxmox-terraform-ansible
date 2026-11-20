@@ -1,0 +1,24 @@
+namespace: razvanapps
+name: k3s_proxmox
+version: 1.0.0
+readme: README.md
+authors:
+  - Razvan Mares <razvan@razvanmares.ro>
+description: Deterministic Proxmox VE + k3s cluster bootstrap and Argo CD GitOps Ansible collection.
+license:
+  - MIT
+tags:
+  - k3s
+  - kubernetes
+  - proxmox
+  - gitops
+  - infrastructure
+repository: https://github.com/RazvanApps/k3s-proxmox-terraform-ansible
+documentation: https://razvanmares.ro/en/blog/provision-k3s-with-terraform-and-ansible-a-repeatable-cluster-blueprint
+homepage: https://razvanmares.ro/en/projects
+issues: https://github.com/RazvanApps/k3s-proxmox-terraform-ansible/issues
+dependencies: {}
+build_ignore:
+  - .terraform
+  - "*.tar.gz"
+  - "*.retry"

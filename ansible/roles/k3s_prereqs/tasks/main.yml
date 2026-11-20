@@ -1,0 +1,32 @@
+---
+- name: Ensure required OS packages are installed
+  ansible.builtin.apt:
+    name:
+      - curl
+      - ca-certificates
+      - gnupg
+      - open-iscsi
+      - nfs-common
+    state: present
+    update_cache: true
+
+- name: Disable swap at runtime
+  ansible.builtin.command: swapoff -a
+  changed_when: false
+
+- name: Ensure br_netfilter and overlay kernel modules load
+  ansible.builtin.copy:
+    dest: /etc/modules-load.d/k3s.conf
+    mode: "0644"
+    content: |
+      overlay
+      br_netfilter
+
+- name: Apply Kubernetes sysctl settings
+  ansible.builtin.copy:
+    dest: /etc/sysctl.d/99-k3s.conf
+    mode: "0644"
+    content: |
+      net.bridge.bridge-nf-call-iptables = 1
+      net.bridge.bridge-nf-call-ip6tables = 1
+      net.ipv4.ip_forward = 1

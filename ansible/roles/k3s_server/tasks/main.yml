@@ -1,0 +1,19 @@
+---
+- name: Install primary k3s control-plane node with embedded etcd
+  ansible.builtin.shell: |
+    curl -sfL https://get.k3s.io | K3S_TOKEN="{{ k3s_cluster_token }}" sh -s - server \
+      --cluster-init \
+      --disable=servicelb \
+      --write-kubeconfig-mode=0644
+  args:
+    creates: /usr/local/bin/k3s
+  when: inventory_hostname == groups['k3s_server'][0]
+
+- name: Join secondary HA k3s control-plane nodes
+  ansible.builtin.shell: |
+    curl -sfL https://get.k3s.io | K3S_TOKEN="{{ k3s_cluster_token }}" sh -s - server \
+      --server "https://{{ hostvars[groups['k3s_server'][0]]['ansible_host'] }}:6443" \
+      --disable=servicelb
+  args:
+    creates: /usr/local/bin/k3s
+  when: inventory_hostname != groups['k3s_server'][0]

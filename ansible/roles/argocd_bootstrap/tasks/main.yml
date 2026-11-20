@@ -1,0 +1,12 @@
+---
+- name: Ensure argocd namespace exists
+  ansible.builtin.command: kubectl create namespace argocd
+  register: ns_result
+  failed_when: ns_result.rc != 0 and 'AlreadyExists' not in ns_result.stderr
+  changed_when: ns_result.rc == 0
+
+- name: Install Argo CD declarative manifests
+  ansible.builtin.command: >
+    kubectl apply -n argocd
+    -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+  changed_when: true

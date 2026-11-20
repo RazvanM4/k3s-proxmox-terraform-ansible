@@ -1,0 +1,11 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+.ansible/
+*.retry
+artifacts/
+*.tar.gz
+.DS_Store
