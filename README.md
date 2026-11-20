@@ -24,7 +24,7 @@ Proxmox VE Cloud-Init Template (VMID 9000)
                      └─ Role: argocd_bootstrap (GitOps control plane)
 ```
 
-> **Terraform Registry Module**: The standalone root Terraform module is also mirrored at [`RazvanApps/terraform-proxmox-k3s`](https://github.com/RazvanApps/terraform-proxmox-k3s) to satisfy the Terraform Registry `terraform-<PROVIDER>-<NAME>` naming convention.
+> **Terraform Registry Module**: The standalone root Terraform module is also mirrored at [`RazvanM4/terraform-proxmox-k3s`](https://github.com/RazvanM4/terraform-proxmox-k3s) to satisfy the Terraform Registry `terraform-<PROVIDER>-<NAME>` naming convention.
 
 ---
 
