@@ -14,8 +14,8 @@ tags:
   - gitops
   - infrastructure
 repository: https://github.com/RazvanM4/k3s-proxmox-terraform-ansible
-documentation: https://razvanmares.ro/en/blog/provision-k3s-with-terraform-and-ansible-a-repeatable-cluster-blueprint
-homepage: https://razvanmares.ro/en/projects
+documentation: https://razvanmares.com/blog/provision-k3s-with-terraform-and-ansible-a-repeatable-cluster-blueprint
+homepage: https://razvanmares.com
 issues: https://github.com/RazvanM4/k3s-proxmox-terraform-ansible/issues
 dependencies: {}
 build_ignore:

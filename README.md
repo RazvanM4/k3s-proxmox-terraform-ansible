@@ -3,9 +3,9 @@
 Repeatable infrastructure-as-code blueprint provisioning a high-availability **k3s Kubernetes cluster** on **Proxmox VE** using **Terraform** (`bpg/proxmox`) followed by **Ansible** configuration management and **Argo CD** GitOps bootstrap.
 
 Companion repository to:
-- [Provision k3s with Terraform and Ansible: A Repeatable Cluster Blueprint](https://razvanmares.ro/en/blog/provision-k3s-with-terraform-and-ansible-a-repeatable-cluster-blueprint)
-- [The Control Plane Relay: Provisioning k3s with Terraform and Ansible](https://razvanmares.ro/en/blog/the-control-plane-relay-provisioning-k3s-with-terraform-and-ansible)
-- [Inside My k3s-on-Proxmox Homelab: A Small Platform With Real Constraints](https://razvanmares.ro/en/blog/inside-my-k3s-on-proxmox-homelab-a-small-platform-with-real-constraints)
+- [Provision k3s with Terraform and Ansible: A Repeatable Cluster Blueprint](https://razvanmares.com/blog/provision-k3s-with-terraform-and-ansible-a-repeatable-cluster-blueprint)
+- [The Control Plane Relay: Provisioning k3s with Terraform and Ansible](https://razvanmares.com/blog/the-control-plane-relay-provisioning-k3s-with-terraform-and-ansible)
+- [Inside My k3s-on-Proxmox Homelab: A Small Platform With Real Constraints](https://razvanmares.com/blog/inside-my-k3s-on-proxmox-homelab-a-small-platform-with-real-constraints)
 
 ---
 
@@ -56,4 +56,4 @@ All default IPv4 addresses in `terraform/variables.tf` use documentation CIDR `1
 
 ## License
 
-MIT — [Răzvan Mareș (RazvanApps)](https://razvanmares.ro)
+MIT — [Răzvan Mareș (RazvanApps)](https://razvanmares.com)
